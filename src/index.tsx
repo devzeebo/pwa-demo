@@ -7,3 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   render(<App />, mount);
 });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', { scope: '/' });
+}
